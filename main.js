@@ -34,14 +34,14 @@ function setup(){
   video.hide();
 
   posenet = ml5.poseNet(video, modelLoaded);
-	poseNet.on('pose', gotPoses)
+	posenet.on('pose', gotPoses)
 }
 function modelLoaded()
 {
   console.log("Posenet Is Initialized!")
 }
 function draw(){
-  image(700, 600, 0, 0);
+
 
   if(score_rightWrist > 0.2)
   {
